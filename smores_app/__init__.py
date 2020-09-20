@@ -7,4 +7,4 @@ app = Flask(__name__)
 app.config.from_pyfile('../config.py') 
 
 
-import my_app.views
+import smores_app.views
