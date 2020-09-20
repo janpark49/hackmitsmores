@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+    <h3>
+        Story time!
+    </h3>
+    <body>
+        <p>{% for para in text %}
+            {{para}} <br>
+        {% endfor %}</p>
+        {% if {next_question} is 4 %}
+        <button type="button"><a href=/end>{{button}}</a></button>
+        {% else %}
+        <button type="button"><a href=/story/{{next_question}}>{{button}}</a></button>
+        {% endif %}
+        <button type="button"><a href=/>Restart from Beginning!</a></button>
+    </body>
+
+</html>
