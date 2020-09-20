@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>"title_here"</title>
+        <script type = "text/javascript">
+            var ans = {{ ams }};
+function result1(){
+    
+    if (ans == 1){
+        document.getElementById("a1").style.background="green";
+        document.getElementById("message").style.color="green";
+        document.getElementById("message").innerHTML={{ win }};
+    } else {
+        document.getElementById("a1").style.background="red";
+        document.getElementById("message").style.color="red";
+        document.getElementById("message").innerHTML={{ lose }};
+    }
+}
+function result2() {
+    if (ans == 2){
+        document.getElementById("a2").style.background="green";
+        document.getElementById("message").style.color="green";
+        document.getElementById("message").innerHTML={{ win }};
+    } else {
+        document.getElementById('a2').style.background="red";
+        document.getElementById("message").style.color="red";
+        document.getElementById("message").innerHTML={{ lose }};
+    }
+}
+function result3(){
+    if (ans == 3){
+        document.getElementById("a3").style.background="green";
+        document.getElementById("message").style.color="green";
+        document.getElementById("message").innerHTML={{ win }};
+    } else {
+        document.getElementById("a3").style.background="red";
+        document.getElementById("message").style.color="red";
+        document.getElementById("message").innerHTML={{ lose }};
+    }
+}
+function result4(){
+    if (ans == 4){
+        document.getElementById("a4").style.background="green";
+        document.getElementById("message").style.color="green";
+        document.getElementById("message").innerHTML={{ win }};
+    } else {
+        document.getElementById("a4").style.background="red";
+        document.getElementById("message").style.color="red";
+        document.getElementById("message").innerHTML={{ lose }};
+    }
+}
+            
+        </script>
+        <link rel="stylesheet" href="qpage.css" media=" all" />
+        
+    </head>
+    
+    <body>
+        
+        <div id="main">
+            <table border="0">
+                <tbody>
+                    <tr>
+                        <td>
+                            <p align="left">
+                                
+                                <div id="question">
+                                    {{ quest }}
+                                    <br>
+                                </div>
+                                <img id="imgcnt" src ="{{ imglnk }}" alt="" align="center">
+                                <br>
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            
+                            <div class="answer" id="a1" onclick="result1()" ><span>{{ ams1 }}</span></div>
+                        </td>
+                        <td>
+                            
+                            <div class="answer" id="a2" onclick = "result2()" ><span> {{ ams2 }} </span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="answer" id="a3" onclick="result3()"><span> {{ ams3 }} </span></div>
+                        </td>
+                        <td>
+                            <div class="answer" id="a4" onclick="result4()"><span> {{ ams4 }} </span></div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div id="message">
+                                <p></p>
+                                </span>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>
