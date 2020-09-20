@@ -24,7 +24,7 @@ def index():
 def qpage(sum):
     next1=["/story/1","/story/2", "/story/3", "/story/4", "/end"]
     data=question_dict[sum]
-    return render_template("qpage.html", ams = r_dat[sum], next=next1[sum], imglnk=img_dat[sum+5], quest=q_dat[sum].split('\n'), ams1=a_dat[num][0],ams2=a_dat[num][1],ams3=a_dat[num][2],ams4=a_dat[num][3])
+    return render_template("qpage.html", ams = r_dat[sum], next=next1[sum], imglnk=img_dat[sum+5], quest=q_dat[sum].split('\n'), ams1=a_dat[sum][0],ams2=a_dat[sum][1],ams3=a_dat[sum][2],ams4=a_dat[sum][3])
 
 @app.route("/story/<int:num>")
 def story_page(num):
