@@ -2,57 +2,69 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>"title_here"</title>
+        <title>S'mores</title>
         <script type = "text/javascript">
             var ans = {{ ams }};
+            var tried = 0;
 function result1(){
-    
-    if (ans == 1){
-        document.getElementById("a1").style.background="green";
-        document.getElementById("message").style.color="green";
-        document.getElementById("message").innerHTML={{ win }};
-    } else {
-        document.getElementById("a1").style.background="red";
-        document.getElementById("message").style.color="red";
-        document.getElementById("message").innerHTML={{ lose }};
+    if (tried=0) {
+        if (ans == 1){
+            tried=1;
+            document.getElementById("a1").style.background="green";
+            document.getElementById("message").style.color="green";
+            document.getElementById("message").innerHTML="<a href={{ next }}><button>Continue</button></a>";
+        } else {
+            document.getElementById("a1").style.background="red";
+            document.getElementById("message").style.color="red";
+            document.getElementById("message").innerHTML="<button>Sorry! Try again.</button>"};
+        }
     }
 }
 function result2() {
-    if (ans == 2){
-        document.getElementById("a2").style.background="green";
-        document.getElementById("message").style.color="green";
-        document.getElementById("message").innerHTML={{ win }};
-    } else {
-        document.getElementById('a2').style.background="red";
-        document.getElementById("message").style.color="red";
-        document.getElementById("message").innerHTML={{ lose }};
+    if (tried=0) {
+        if (ans == 2){
+            tried=1;
+            document.getElementById("a2").style.background="green";
+            document.getElementById("message").style.color="green";
+            document.getElementById("message").innerHTML="<a href={{ next }}><button>Continue</button></a>";
+        } else {
+            document.getElementById("a2").style.background="red";
+            document.getElementById("message").style.color="red";
+            document.getElementById("message").innerHTML="<button>Sorry! Try again.</button>"};
+        }
     }
 }
 function result3(){
-    if (ans == 3){
-        document.getElementById("a3").style.background="green";
-        document.getElementById("message").style.color="green";
-        document.getElementById("message").innerHTML={{ win }};
-    } else {
-        document.getElementById("a3").style.background="red";
-        document.getElementById("message").style.color="red";
-        document.getElementById("message").innerHTML={{ lose }};
+    if (tried=0) {
+        if (ans == 3){
+            tried=1;
+            document.getElementById("a3").style.background="green";
+            document.getElementById("message").style.color="green";
+            document.getElementById("message").innerHTML="<a href={{ next }}><button>Continue</button></a>";
+        } else {
+            document.getElementById("a3").style.background="red";
+            document.getElementById("message").style.color="red";
+            document.getElementById("message").innerHTML="<button>Sorry! Try again.</button>"};
+        }
     }
 }
 function result4(){
-    if (ans == 4){
-        document.getElementById("a4").style.background="green";
-        document.getElementById("message").style.color="green";
-        document.getElementById("message").innerHTML={{ win }};
-    } else {
-        document.getElementById("a4").style.background="red";
-        document.getElementById("message").style.color="red";
-        document.getElementById("message").innerHTML={{ lose }};
+    if (tried=0) {
+        if (ans == 4){
+            tried=1;
+            document.getElementById("a4").style.background="green";
+            document.getElementById("message").style.color="green";
+            document.getElementById("message").innerHTML="<a href={{ next }}><button>Continue</button></a>";
+        } else {
+            document.getElementById("a4").style.background="red";
+            document.getElementById("message").style.color="red";
+            document.getElementById("message").innerHTML="<button>Sorry! Try again.</button>"};
+        }
     }
 }
             
         </script>
-        <link rel="stylesheet" href="qpage.css" media=" all" />
+        <link rel="stylesheet" href="/static/qpage.css" media=" all" />
         
     </head>
     
@@ -66,10 +78,12 @@ function result4(){
                             <p align="left">
                                 
                                 <div id="question">
-                                    {{ quest }}
+                                    <p>{% for para in quest %}
+                                        {{para}} <br>
+                                    {% endfor %}</p>
                                     <br>
                                 </div>
-                                <img id="imgcnt" src ="{{ imglnk }}" alt="" align="center">
+                                <img id="imgcnt" src ={{ imglnk }} alt="" align="center">
                                 <br>
                             </p>
                         </td>
